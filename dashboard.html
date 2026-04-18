@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления — Red1dark Platform</title>
+    <meta name="description" content="Панель управления Red1dark Platform: настройки, токены, API-ключи, статистика">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">R1</div>
+                <span>Red1dark</span>
+            </a>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Главная</a></li>
+                <li><a href="messenger.html" class="navbar-link">Мессенджер</a></li>
+                <li><a href="bots.html" class="navbar-link">Боты</a></li>
+                <li><a href="verify.html" class="navbar-link">RedVerify</a></li>
+                <li><a href="dashboard.html" class="navbar-link active">Панель управления</a></li>
+            </ul>
+            
+            <div class="navbar-actions">
+                <button class="lang-switcher">RU</button>
+                <a href="profile.html" class="btn btn-secondary btn-sm">👤 Профиль</a>
+            </div>
+            
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <nav>
+                <a href="#overview" class="dashboard-nav-item active">
+                    <span>📊</span>
+                    <span>Обзор</span>
+                </a>
+                <a href="#bots" class="dashboard-nav-item">
+                    <span>🤖</span>
+                    <span>Мои боты</span>
+                </a>
+                <a href="#api" class="dashboard-nav-item">
+                    <span>🔑</span>
+                    <span>API ключи</span>
+                </a>
+                <a href="#verify" class="dashboard-nav-item">
+                    <span>✓</span>
+                    <span>RedVerify</span>
+                </a>
+                <a href="#accounts" class="dashboard-nav-item">
+                    <span>🔗</span>
+                    <span>Привязанные аккаунты</span>
+                </a>
+                <a href="#security" class="dashboard-nav-item">
+                    <span>🛡️</span>
+                    <span>Безопасность</span>
+                </a>
+                <a href="#logs" class="dashboard-nav-item">
+                    <span>📋</span>
+                    <span>История действий</span>
+                </a>
+                <a href="#settings" class="dashboard-nav-item">
+                    <span>⚙️</span>
+                    <span>Настройки</span>
+                </a>
+            </nav>
+            
+            <div style="margin-top: auto; padding-top: var(--spacing-xl); border-top: 1px solid rgba(255,255,255,0.05);">
+                <a href="index.html" class="dashboard-nav-item">
+                    <span>🏠</span>
+                    <span>На сайт</span>
+                </a>
+                <a href="#" class="dashboard-nav-item" style="color: var(--status-error);">
+                    <span>🚪</span>
+                    <span>Выйти</span>
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Панель управления</h1>
+                <p class="dashboard-subtitle">Управляйте вашей экосистемой Red1dark</p>
+            </div>
+            
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card-icon">🤖</div>
+                    <div class="stat-card-info">
+                        <div class="stat-card-value">12</div>
+                        <div class="stat-card-label">Ботов создано</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-icon">💬</div>
+                    <div class="stat-card-info">
+                        <div class="stat-card-value">45,234</div>
+                        <div class="stat-card-label">Сообщений обработано</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-icon">👥</div>
+                    <div class="stat-card-info">
+                        <div class="stat-card-value">8,567</div>
+                        <div class="stat-card-label">Пользователей ботов</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-icon">✓</div>
+                    <div class="stat-card-info">
+                        <div class="stat-card-value">Активен</div>
+                        <div class="stat-card-label">Статус RedVerify</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bot Tokens Section -->
+            <div class="card mb-lg" id="bots">
+                <div class="card-header">
+                    <h3 class="card-title">🤖 Токены ботов</h3>
+                    <button class="btn btn-primary btn-sm" data-modal="createBotModal">+ Создать бота</button>
+                </div>
+                <div class="card-body">
+                    <div class="admin-profile">
+                        <div class="api-key-row">
+                            <div>
+                                <strong>@myassistant_bot</strong>
+                                <div class="text-muted" style="font-size: 0.85rem;">Создан: 15.01.2024</div>
+                            </div>
+                            <div class="flex gap-sm">
+                                <button class="btn btn-sm btn-secondary" data-copy="1234567890:ABCdefGHIjklMNOpqrsTUVwxyz" title="Копировать токен">📋 Копировать</button>
+                                <button class="btn btn-sm btn-outline">⚙️ Настройки</button>
+                            </div>
+                        </div>
+                        
+                        <div class="api-key-row">
+                            <div>
+                                <strong>@shop_helper_bot</strong>
+                                <div class="text-muted" style="font-size: 0.85rem;">Создан: 10.01.2024</div>
+                            </div>
+                            <div class="flex gap-sm">
+                                <button class="btn btn-sm btn-secondary" data-copy="0987654321:ZYXwvuTSRQponMLKJihGFEdcBA" title="Копировать токен">📋 Копировать</button>
+                                <button class="btn btn-sm btn-outline">⚙️ Настройки</button>
+                            </div>
+                        </div>
+                        
+                        <div class="api-key-row">
+                            <div>
+                                <strong>@support_bot</strong>
+                                <div class="text-muted" style="font-size: 0.85rem;">Создан: 05.01.2024</div>
+                            </div>
+                            <div class="flex gap-sm">
+                                <button class="btn btn-sm btn-secondary" data-copy="ABCDEFGHIJ:1234567890abcdefghij" title="Копировать токен">📋 Копировать</button>
+                                <button class="btn btn-sm btn-outline">⚙️ Настройки</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- API Keys Section -->
+            <div class="card mb-lg" id="api">
+                <div class="card-header">
+                    <h3 class="card-title">🔑 API ключи</h3>
+                    <button class="btn btn-primary btn-sm">+ Создать ключ</button>
+                </div>
+                <div class="card-body">
+                    <div class="admin-profile">
+                        <div class="api-key-row">
+                            <div>
+                                <strong>Production Key</strong>
+                                <div class="text-muted" style="font-size: 0.85rem; font-family: var(--font-mono);">rk_prod_******************************abc123</div>
+                                <div class="text-muted" style="font-size: 0.75rem;">Доступ: полный • Последнее использование: 2 мин назад</div>
+                            </div>
+                            <div class="flex gap-sm">
+                                <button class="btn btn-sm btn-success" style="background: var(--status-success); color: #000;">● Активен</button>
+                                <button class="btn btn-sm btn-outline">📋 Копировать</button>
+                                <button class="btn btn-sm btn-secondary">✏️ Редактировать</button>
+                            </div>
+                        </div>
+                        
+                        <div class="api-key-row">
+                            <div>
+                                <strong>Development Key</strong>
+                                <div class="text-muted" style="font-size: 0.85rem; font-family: var(--font-mono);">rk_dev_*******************************xyz789</div>
+                                <div class="text-muted" style="font-size: 0.75rem;">Доступ: чтение • Последнее использование: 1 час назад</div>
+                            </div>
+                            <div class="flex gap-sm">
+                                <button class="btn btn-sm btn-success" style="background: var(--status-success); color: #000;">● Активен</button>
+                                <button class="btn btn-sm btn-outline">📋 Копировать</button>
+                                <button class="btn btn-sm btn-secondary">✏️ Редактировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RedVerify Status -->
+            <div class="card mb-lg" id="verify">
+                <div class="card-header">
+                    <h3 class="card-title">✓ Статус RedVerify</h3>
+                </div>
+                <div class="card-body">
+                    <div class="flex-between" style="align-items: center; gap: var(--spacing-lg);">
+                        <div class="flex" style="align-items: center; gap: var(--spacing-md);">
+                            <img src="https://imgfy.ru/ib/vpttRAnmBDZi4up_1776534392.webp" alt="Verified" style="width: 48px; height: 48px; filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.5));">
+                            <div>
+                                <h4 style="margin-bottom: var(--spacing-xs);">Верифицированный пользователь</h4>
+                                <p style="margin: 0;">Ваш аккаунт подтверждён системой RedVerify</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="badge badge-success" style="font-size: 0.9rem; padding: 8px 16px;">✓ Подтверждено</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: var(--spacing-lg); padding: var(--spacing-lg); background: var(--bg-primary); border-radius: var(--radius-md);">
+                        <h5 style="margin-bottom: var(--spacing-sm);">📅 Дата верификации:</h5>
+                        <p style="margin: 0 0 var(--spacing-md) 0; color: var(--text-secondary);">15 декабря 2023 года</p>
+                        
+                        <h5 style="margin-bottom: var(--spacing-sm);">🔐 Преимущества:</h5>
+                        <ul style="color: var(--text-secondary); line-height: 1.8;">
+                            <li>✓ Значок верификации в профиле и сообщениях</li>
+                            <li>✓ Приоритетная поддержка</li>
+                            <li>✓ Расширенные лимиты на создание ботов</li>
+                            <li>✓ Доступ к закрытым функциям платформы</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Connected Accounts -->
+            <div class="card mb-lg" id="accounts">
+                <div class="card-header">
+                    <h3 class="card-title">🔗 Привязанные аккаунты</h3>
+                </div>
+                <div class="card-body">
+                    <div class="grid grid-3">
+                        <div class="card" style="border: 1px solid var(--status-success);">
+                            <div class="flex-center" style="flex-direction: column; text-align: center;">
+                                <div style="width: 64px; height: 64px; background: #229ED9; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: var(--spacing-md);">✈</div>
+                                <h4 style="margin-bottom: var(--spacing-xs);">Telegram</h4>
+                                <p style="font-size: 0.9rem;">@username</p>
+                                <span class="badge badge-success">Подключено</span>
+                                <button class="btn btn-sm btn-outline mt-md">Отключить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="border: 1px solid var(--status-success);">
+                            <div class="flex-center" style="flex-direction: column; text-align: center;">
+                                <div style="width: 64px; height: 64px; background: #0077FF; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: var(--spacing-md);">VK</div>
+                                <h4 style="margin-bottom: var(--spacing-xs);">ВКонтакте</h4>
+                                <p style="font-size: 0.9rem;">id123456789</p>
+                                <span class="badge badge-success">Подключено</span>
+                                <button class="btn btn-sm btn-outline mt-md">Отключить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="opacity: 0.5;">
+                            <div class="flex-center" style="flex-direction: column; text-align: center;">
+                                <div style="width: 64px; height: 64px; background: #FC3F1D; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: var(--spacing-md);">Y</div>
+                                <h4 style="margin-bottom: var(--spacing-xs);">Yandex</h4>
+                                <p style="font-size: 0.9rem;">Не подключено</p>
+                                <button class="btn btn-sm btn-primary mt-md">Подключить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action History -->
+            <div class="card" id="logs">
+                <div class="card-header">
+                    <h3 class="card-title">📋 История действий</h3>
+                    <button class="btn btn-sm btn-secondary">📥 Экспорт</button>
+                </div>
+                <div class="card-body">
+                    <div class="action-log">
+                        <div class="action-log-item">
+                            <div class="action-log-time">2024-01-20 14:32</div>
+                            <div class="action-log-action">Создан новый бот @myassistant_bot</div>
+                            <div class="action-log-status status-success">Успешно</div>
+                        </div>
+                        
+                        <div class="action-log-item">
+                            <div class="action-log-time">2024-01-20 12:15</div>
+                            <div class="action-log-action">Обновлён API ключ Production Key</div>
+                            <div class="action-log-status status-success">Успешно</div>
+                        </div>
+                        
+                        <div class="action-log-item">
+                            <div class="action-log-time">2024-01-19 18:45</div>
+                            <div class="action-log-action">Подключён аккаунт ВКонтакте</div>
+                            <div class="action-log-status status-success">Успешно</div>
+                        </div>
+                        
+                        <div class="action-log-item">
+                            <div class="action-log-time">2024-01-19 10:20</div>
+                            <div class="action-log-action">Изменены настройки безопасности</div>
+                            <div class="action-log-status status-success">Успешно</div>
+                        </div>
+                        
+                        <div class="action-log-item">
+                            <div class="action-log-time">2024-01-18 16:30</div>
+                            <div class="action-log-action">Попытка входа с нового устройства</div>
+                            <div class="action-log-status status-success">Успешно</div>
+                        </div>
+                        
+                        <div class="action-log-item">
+                            <div class="action-log-time">2024-01-17 09:15</div>
+                            <div class="action-log-action">Неудачная попытка ввода API ключа</div>
+                            <div class="action-log-status status-error">Ошибка</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Create Bot Modal -->
+    <div class="modal-overlay" id="createBotModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">🤖 Создать нового бота</h3>
+                <button class="modal-close">✕</button>
+            </div>
+            <div class="modal-body">
+                <form class="bot-form">
+                    <div class="form-group">
+                        <label class="form-label">Название бота</label>
+                        <input type="text" class="form-input" placeholder="My Assistant Bot" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Юзернейм (@username)</label>
+                        <input type="text" class="form-input" placeholder="@myassistant_bot" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Описание</label>
+                        <textarea class="form-textarea" placeholder="Опишите функционал вашего бота..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Тип бота</label>
+                        <select class="form-select">
+                            <option value="standard">Стандартный</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="support">Техподдержка</option>
+                            <option value="game">Игровой</option>
+                            <option value="utility">Утилитарный</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary modal-close">Отмена</button>
+                <button class="btn btn-primary">Создать бота</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
