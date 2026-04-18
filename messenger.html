@@ -1,253 +1,203 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мессенджер — Red1dark Platform</title>
-    <meta name="description" content="Мессенджер Red1dark Platform: личные чаты, группы, супергруппы и каналы">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мессенджер — Red1dark Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container navbar-content">
-            <a href="index.html" class="navbar-brand">
-                <div class="navbar-logo">R1</div>
-                <span>Red1dark</span>
-            </a>
-            
-            <ul class="navbar-menu">
-                <li><a href="index.html" class="navbar-link">Главная</a></li>
-                <li><a href="messenger.html" class="navbar-link active">Мессенджер</a></li>
-                <li><a href="bots.html" class="navbar-link">Боты</a></li>
-                <li><a href="verify.html" class="navbar-link">RedVerify</a></li>
-                <li><a href="dashboard.html" class="navbar-link">Панель управления</a></li>
-            </ul>
-            
-            <div class="navbar-actions">
-                <button class="lang-switcher">RU</button>
-                <div class="dropdown">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4M12 8h.01'/%3E%3C/svg%3E" alt="Profile" style="width: 20px; height: 20px; border-radius: 50%;">
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="profile.html" class="dropdown-item">👤 Профиль</a>
-                        <a href="settings.html" class="dropdown-item">⚙️ Настройки</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">🚪 Выйти</a>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
 
-    <!-- Messenger Container -->
-    <div class="messenger-container">
-        <!-- Sidebar -->
-        <div class="messenger-sidebar">
-            <div class="messenger-search">
-                <input type="text" class="search-input" placeholder="Поиск..." data-filter-target=".chat-item">
-            </div>
-            
-            <div class="chat-list">
-                <!-- Chat Item 1 -->
-                <div class="chat-item active">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Pavel" alt="Avatar" class="chat-avatar">
-                    <div class="chat-info">
-                        <div class="chat-name">
-                            Павел Дуров
-                            <img src="https://imgfy.ru/ib/vpttRAnmBDZi4up_1776534392.webp" alt="Verified" style="width: 16px; height: 16px;">
-                        </div>
-                        <div class="chat-preview">Привет! Как дела с проектом?</div>
-                    </div>
-                    <div class="chat-meta">
-                        <div class="chat-time">14:32</div>
-                        <div class="chat-badge">2</div>
-                    </div>
-                </div>
-                
-                <!-- Chat Item 2 -->
-                <div class="chat-item">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Elon" alt="Avatar" class="chat-avatar">
-                    <div class="chat-info">
-                        <div class="chat-name">Илон Маск</div>
-                        <div class="chat-preview">Запускаем ракету через час 🚀</div>
-                    </div>
-                    <div class="chat-meta">
-                        <div class="chat-time">13:15</div>
-                    </div>
-                </div>
-                
-                <!-- Chat Item 3: Group -->
-                <div class="chat-item">
-                    <img src="https://api.dicebear.com/7.x/identicon/svg?seed=DevTeam" alt="Avatar" class="chat-avatar">
-                    <div class="chat-info">
-                        <div class="chat-name">
-                            💻 Dev Team
-                            <span class="badge badge-info" style="font-size: 0.65rem;">Группа</span>
-                        </div>
-                        <div class="chat-preview">Алексей: Обновление готово к деплою</div>
-                    </div>
-                    <div class="chat-meta">
-                        <div class="chat-time">12:45</div>
-                        <div class="chat-badge">5</div>
-                    </div>
-                </div>
-                
-                <!-- Chat Item 4: Channel -->
-                <div class="chat-item">
-                    <img src="https://api.dicebear.com/7.x/identicon/svg?seed=News" alt="Avatar" class="chat-avatar">
-                    <div class="chat-info">
-                        <div class="chat-name">
-                            📢 Red1dark News
-                            <span class="badge badge-primary" style="font-size: 0.65rem;">Канал</span>
-                        </div>
-                        <div class="chat-preview">Новое обновление платформы уже доступно!</div>
-                    </div>
-                    <div class="chat-meta">
-                        <div class="chat-time">11:20</div>
-                    </div>
-                </div>
-                
-                <!-- Chat Item 5: Bot -->
-                <div class="chat-item">
-                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=BotFather" alt="Avatar" class="chat-avatar">
-                    <div class="chat-info">
-                        <div class="chat-name">
-                            🤖 BotFather
-                            <span class="badge badge-success" style="font-size: 0.65rem;">Бот</span>
-                        </div>
-                        <div class="chat-preview">Ваш бот @mybot успешно создан!</div>
-                    </div>
-                    <div class="chat-meta">
-                        <div class="chat-time">10:05</div>
-                    </div>
-                </div>
-                
-                <!-- Chat Item 6 -->
-                <div class="chat-item">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Anna" alt="Avatar" class="chat-avatar">
-                    <div class="chat-info">
-                        <div class="chat-name">Анна Смирнова</div>
-                        <div class="chat-preview">Спасибо за помощь!</div>
-                    </div>
-                    <div class="chat-meta">
-                        <div class="chat-time">Вчера</div>
-                    </div>
-                </div>
-                
-                <!-- Chat Item 7: Supergroup -->
-                <div class="chat-item">
-                    <img src="https://api.dicebear.com/7.x/identicon/svg?seed=CryptoChat" alt="Avatar" class="chat-avatar">
-                    <div class="chat-info">
-                        <div class="chat-name">
-                            💰 Crypto Chat
-                            <span class="badge badge-warning" style="font-size: 0.65rem;">Супергруппа</span>
-                        </div>
-                        <div class="chat-preview">Дмитрий: Биткоин пробил $100K!</div>
-                    </div>
-                    <div class="chat-meta">
-                        <div class="chat-time">Вчера</div>
-                        <div class="chat-badge">99+</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Main Chat Area -->
-        <div class="messenger-main">
-            <!-- Chat Header -->
-            <div class="chat-header">
-                <div class="chat-header-info">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Pavel" alt="Avatar" class="chat-header-avatar">
-                    <div>
-                        <div class="chat-header-name">
-                            Павел Дуров
-                            <img src="https://imgfy.ru/ib/vpttRAnmBDZi4up_1776534392.webp" alt="Verified" style="width: 18px; height: 18px; vertical-align: middle; margin-left: 6px;">
-                        </div>
-                        <div class="chat-header-status">в сети</div>
-                    </div>
-                </div>
-                <div class="chat-header-actions">
-                    <button class="btn btn-icon btn-secondary" title="Поиск">🔍</button>
-                    <button class="btn btn-icon btn-secondary" title="Звонок">📞</button>
-                    <button class="btn btn-icon btn-secondary" title="Видеозвонок">📹</button>
-                    <button class="btn btn-icon btn-secondary" title="Информация">ℹ️</button>
-                </div>
-            </div>
-            
-            <!-- Messages Container -->
-            <div class="messages-container">
-                <!-- Message Received -->
-                <div class="message">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Pavel" alt="Avatar" class="message-avatar">
-                    <div class="message-content">
-                        <div class="message-text">Привет! Как дела с проектом Red1dark?</div>
-                        <div class="message-time">14:30</div>
-                    </div>
-                </div>
-                
-                <!-- Message Sent -->
-                <div class="message sent">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=User" alt="Avatar" class="message-avatar">
-                    <div class="message-content">
-                        <div class="message-text">Привет, Павел! Всё отлично! Платформа почти готова, осталось несколько финальных штрихов.</div>
-                        <div class="message-time">14:31</div>
-                    </div>
-                </div>
-                
-                <!-- Message Received -->
-                <div class="message">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Pavel" alt="Avatar" class="message-avatar">
-                    <div class="message-content">
-                        <div class="message-text">Отлично слышать! Когда планируете запуск?</div>
-                        <div class="message-time">14:31</div>
-                    </div>
-                </div>
-                
-                <!-- Message Sent -->
-                <div class="message sent">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=User" alt="Avatar" class="message-avatar">
-                    <div class="message-content">
-                        <div class="message-text">На следующей неделе! Уже тестируем мессенджер, ботов и систему верификации RedVerify.</div>
-                        <div class="message-time">14:32</div>
-                    </div>
-                </div>
-                
-                <!-- Message Received -->
-                <div class="message">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Pavel" alt="Avatar" class="message-avatar">
-                    <div class="message-content">
-                        <div class="message-text">Супер! Буду ждать. Если нужна будет помощь с масштабированием — обращайся 🚀</div>
-                        <div class="message-time">14:32</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Message Input -->
-            <div class="message-input-container">
-                <button class="btn btn-icon btn-secondary" title="Прикрепить файл">📎</button>
-                <input type="text" class="message-input" placeholder="Написать сообщение...">
-                <button class="btn btn-icon btn-secondary" title="Эмодзи">😊</button>
-                <button class="send-button">➤</button>
-            </div>
-        </div>
+<!-- HEADER -->
+<header class="header">
+  <a href="/" class="logo">
+    <div class="logo-icon">R1</div>
+    <span class="text-gradient">Red1dark</span>
+  </a>
+  
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link">Главная</a></li>
+      <li><a href="messenger.html" class="nav-link active">Мессенджер</a></li>
+      <li><a href="dashboard.html" class="nav-link">Панель</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+      <div class="lang-switch"><span>🌐</span><span>RU</span></div>
+      <a href="#" class="btn btn-sm btn-secondary">Профиль</a>
     </div>
+  </nav>
+</header>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
+<!-- MESSENGER -->
+<div class="messenger">
+  <!-- SIDEBAR -->
+  <aside class="messenger-sidebar">
+    <div class="messenger-search">
+      <input type="text" placeholder="Поиск чатов..." id="chatSearch">
+    </div>
+    
+    <div class="chat-list">
+      <!-- Chat 1 -->
+      <div class="chat-item active">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%237A3FFF'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40'%3E🤖%3C/text%3E%3C/svg%3E" alt="" class="chat-avatar">
+        <div class="chat-info">
+          <div class="chat-name">
+            BotFather
+            <img src="https://imgfy.ru/ib/vpttRAnmBDZi4up_1776534392.webp" alt="✓" class="verified-badge">
+          </div>
+          <div class="chat-last-message">Ваш бот успешно создан!</div>
+        </div>
+        <div class="chat-meta">
+          <div class="chat-time">12:30</div>
+          <div class="chat-unread">2</div>
+        </div>
+      </div>
+      
+      <!-- Chat 2 -->
+      <div class="chat-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%233F8CFF'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='30'%3E👥%3C/text%3E%3C/svg%3E" alt="" class="chat-avatar">
+        <div class="chat-info">
+          <div class="chat-name">Разработка Red1dark</div>
+          <div class="chat-last-message">Алексей: Завтра релиз новой версии</div>
+        </div>
+        <div class="chat-meta">
+          <div class="chat-time">11:45</div>
+          <div class="chat-unread">15</div>
+        </div>
+      </div>
+      
+      <!-- Chat 3 -->
+      <div class="chat-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2300E5FF'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='30'%3E📢%3C/text%3E%3C/svg%3E" alt="" class="chat-avatar">
+        <div class="chat-info">
+          <div class="chat-name">Новости платформы</div>
+          <div class="chat-last-message">Обновление системы верификации...</div>
+        </div>
+        <div class="chat-meta">
+          <div class="chat-time">Вчера</div>
+        </div>
+      </div>
+      
+      <!-- Chat 4 -->
+      <div class="chat-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FF4757'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='30'%3E⚠️%3C/text%3E%3C/svg%3E" alt="" class="chat-avatar">
+        <div class="chat-info">
+          <div class="chat-name">Report Bot</div>
+          <div class="chat-last-message">Жалоба #4521 рассмотрена</div>
+        </div>
+        <div class="chat-meta">
+          <div class="chat-time">Вчера</div>
+          <div class="chat-unread">1</div>
+        </div>
+      </div>
+      
+      <!-- Chat 5 -->
+      <div class="chat-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2300FF88'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='30'%3E✅%3C/text%3E%3C/svg%3E" alt="" class="chat-avatar">
+        <div class="chat-info">
+          <div class="chat-name">RedVerify Bot</div>
+          <div class="chat-last-message">Ваша заявка одобрена!</div>
+        </div>
+        <div class="chat-meta">
+          <div class="chat-time">Пн</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- MAIN CHAT -->
+  <main class="messenger-main">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%237A3FFF'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40'%3E🤖%3C/text%3E%3C/svg%3E" alt="" class="chat-header-avatar">
+        <div>
+          <div class="chat-header-name">
+            BotFather
+            <img src="https://imgfy.ru/ib/vpttRAnmBDZi4up_1776534392.webp" alt="✓" class="verified-badge" style="width: 20px; height: 20px;">
+          </div>
+          <div class="chat-header-status">бот • онлайн</div>
+        </div>
+      </div>
+      <div class="chat-header-actions">
+        <button class="btn btn-icon btn-ghost">🔍</button>
+        <button class="btn btn-icon btn-ghost">⋮</button>
+      </div>
+    </div>
+    
+    <div class="messages-container">
+      <div class="message incoming">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%237A3FFF'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40'%3E🤖%3C/text%3E%3C/svg%3E" alt="" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">Привет! Я BotFather — официальный бот для создания и управления ботами Red1dark Platform.</div>
+          <div class="message-meta">
+            <span>12:28</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="message incoming">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%237A3FFF'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40'%3E🤖%3C/text%3E%3C/svg%3E" alt="" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">Чтобы создать нового бота, отправьте команду /newbot или нажмите кнопку ниже.</div>
+          <div class="message-meta">
+            <span>12:28</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="message outgoing">
+        <div class="message-content">
+          <div class="message-bubble">Создать нового бота</div>
+          <div class="message-meta">
+            <span>12:29</span>
+            <span>✓✓</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="message incoming">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%237A3FFF'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40'%3E🤖%3C/text%3E%3C/svg%3E" alt="" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">Отлично! Введите имя для вашего бота:</div>
+          <div class="message-meta">
+            <span>12:29</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="message outgoing">
+        <div class="message-content">
+          <div class="message-bubble">MySuperBot</div>
+          <div class="message-meta">
+            <span>12:30</span>
+            <span>✓✓</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="message incoming">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%237A3FFF'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40'%3E🤖%3C/text%3E%3C/svg%3E" alt="" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">🎉 Ваш бот успешно создан!<br><br>Токен: <code style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px;">bot_7x9k2m4p8q1w5e3r</code><br><br>Используйте этот токен для подключения бота к платформе или Telegram через TELEGRAM_TOKEN.</div>
+          <div class="message-meta">
+            <span>12:30</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="message-input-area">
+      <button class="btn btn-icon btn-ghost">📎</button>
+      <input type="text" class="message-input" placeholder="Написать сообщение...">
+      <button class="btn btn-icon btn-primary message-send-btn">➤</button>
+    </div>
+  </main>
+</div>
+
+<script src="js/app.js"></script>
 </body>
 </html>
