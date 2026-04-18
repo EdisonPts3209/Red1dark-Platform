@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red1dark Platform — Независимая технологическая экосистема</title>
+    <meta name="description" content="Red1dark Platform — независимая технологическая экосистема: мессенджер, боты, верификация RedVerify, CMS и панель управления">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">R1</div>
+                <span>Red1dark</span>
+            </a>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link active" data-i18n="home">Главная</a></li>
+                <li><a href="about.html" class="navbar-link" data-i18n="about">О студии</a></li>
+                <li><a href="projects.html" class="navbar-link" data-i18n="projects">Проекты</a></li>
+                <li><a href="verify.html" class="navbar-link" data-i18n="verify">RedVerify</a></li>
+                <li><a href="services.html" class="navbar-link" data-i18n="services">Услуги</a></li>
+                <li><a href="media.html" class="navbar-link" data-i18n="media">Контент / СМИ</a></li>
+                <li><a href="philosophy.html" class="navbar-link" data-i18n="philosophy">Философия</a></li>
+                <li><a href="contacts.html" class="navbar-link" data-i18n="contacts">Контакты</a></li>
+            </ul>
+            
+            <div class="navbar-actions">
+                <button class="lang-switcher">RU</button>
+                <a href="login.html" class="btn btn-secondary btn-sm" data-i18n="login">Войти</a>
+                <a href="signup.html" class="btn btn-primary btn-sm" data-i18n="signup">Регистрация</a>
+            </div>
+            
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html" data-i18n="home">Главная</a>
+        <a href="about.html" data-i18n="about">О студии</a>
+        <a href="projects.html" data-i18n="projects">Проекты</a>
+        <a href="verify.html" data-i18n="verify">RedVerify</a>
+        <a href="services.html" data-i18n="services">Услуги</a>
+        <a href="media.html" data-i18n="media">Контент / СМИ</a>
+        <a href="philosophy.html" data-i18n="philosophy">Философия</a>
+        <a href="contacts.html" data-i18n="contacts">Контакты</a>
+        <a href="login.html" data-i18n="login">Войти</a>
+        <a href="signup.html" data-i18n="signup">Регистрация</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                Независимая технологическая<br>экосистема будущего
+            </h1>
+            <p class="hero-subtitle">
+                Мессенджер, боты, верификация RedVerify, CMS и панель управления в единой платформе. 
+                Технологии уровня Telegram и Discord с уникальным дизайном.
+            </p>
+            <div class="hero-buttons">
+                <a href="messenger.html" class="btn btn-primary btn-lg">
+                    🚀 Запустить мессенджер
+                </a>
+                <a href="dashboard.html" class="btn btn-outline btn-lg">
+                    ⚙️ Панель управления
+                </a>
+                <a href="verify.html" class="btn btn-secondary btn-lg">
+                    ✓ RedVerify
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2 class="text-gradient">Возможности платформы</h2>
+                <p>Все инструменты для создания и управления вашим цифровым присутствием</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1: Messenger -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">Мессенджер</h3>
+                    <p class="feature-description">
+                        Личные чаты, группы до 200 участников, супергруппы до 200 000, публичные и приватные каналы. 
+                        Быстрые уведомления, шифрование и синхронизация на всех устройствах.
+                    </p>
+                </div>
+                
+                <!-- Feature 2: BotFather -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">BotFather</h3>
+                    <p class="feature-description">
+                        Создавайте и управляйте ботами Red1dark. Получайте токен, пишите код в VSCode, 
+                        запускайте локально или на внешнем хостинге. Подключение к Telegram через TELEGRAM_TOKEN.
+                    </p>
+                </div>
+                
+                <!-- Feature 3: RedVerify -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title">RedVerify</h3>
+                    <p class="feature-description">
+                        Официальная система верификации пользователей. Получите значок подтверждения 
+                        и выделите свой профиль среди остальных. Доверие и безопасность.
+                    </p>
+                </div>
+                
+                <!-- Feature 4: CMS -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">📝</div>
+                    <h3 class="feature-title">CMS</h3>
+                    <p class="feature-description">
+                        Многостраничный сайт с управлением контентом без кода. Интуитивный редактор, 
+                        SEO-оптимизация, адаптивный дизайн и быстрая публикация.
+                    </p>
+                </div>
+                
+                <!-- Feature 5: Moderation -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Модерация</h3>
+                    <p class="feature-description">
+                        Автоматическая модерация контента через OpenAI Moderation. Проверка сообщений, 
+                        ников, описаний и каналов на соответствие правилам платформы.
+                    </p>
+                </div>
+                
+                <!-- Feature 6: Dashboard -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">⚙️</div>
+                    <h3 class="feature-title">Панель управления</h3>
+                    <p class="feature-description">
+                        Полный контроль над вашей экосистемой. Настройки, токены ботов, API-ключи, 
+                        статус RedVerify, история действий и привязанные аккаунты.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Bots Section -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2 class="text-gradient">Официальные боты платформы</h2>
+                <p>Инструменты для управления, безопасности и верификации</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- BotFather -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <h3 class="card-title">🤖 BotFather</h3>
+                        <span class="badge badge-primary">Official</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Создание и управление ботами Red1dark. Генерация токенов, настройка вебхуков, 
+                        мониторинг активности и статистика использования.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="bots.html" class="btn btn-primary w-100">Создать бота</a>
+                    </div>
+                </div>
+                
+                <!-- Report Bot -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <h3 class="card-title">📋 Report Bot</h3>
+                        <span class="badge badge-primary">Official</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Жалобы на пользователей, сообщения, каналы. Автоматическая обработка 
+                        и уведомление модераторов. Система рейтинга нарушителей.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-secondary w-100">Подать жалобу</a>
+                    </div>
+                </div>
+                
+                <!-- RedVerify Bot -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <h3 class="card-title">✓ RedVerify Bot</h3>
+                        <span class="badge badge-primary">Official</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Официальная верификация пользователей. Подача заявки, проверка документов, 
+                        получение значка подтверждения статуса.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="verify.html" class="btn btn-outline w-100">Верифицироваться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-card-icon">👥</div>
+                    <div class="stat-card-info">
+                        <div class="stat-card-value">50,000+</div>
+                        <div class="stat-card-label">Пользователей</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-card-icon">💬</div>
+                    <div class="stat-card-info">
+                        <div class="stat-card-value">1M+</div>
+                        <div class="stat-card-label">Сообщений в день</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-card-icon">🤖</div>
+                    <div class="stat-card-info">
+                        <div class="stat-card-value">5,000+</div>
+                        <div class="stat-card-label">Ботов создано</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-card-icon">✓</div>
+                    <div class="stat-card-info">
+                        <div class="stat-card-value">2,500+</div>
+                        <div class="stat-card-label">Верифицировано</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(122, 63, 255, 0.1) 0%, rgba(63, 140, 255, 0.1) 100%);">
+        <div class="container text-center">
+            <h2 class="mb-lg">Готовы начать?</h2>
+            <p class="mb-xl" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                Присоединяйтесь к Red1dark Platform сегодня и получите доступ ко всем инструментам 
+                для создания вашей цифровой экосистемы.
+            </p>
+            <div class="flex-center gap-lg" style="flex-wrap: wrap;">
+                <a href="signup.html" class="btn btn-primary btn-lg">Создать аккаунт</a>
+                <a href="messenger.html" class="btn btn-secondary btn-lg">Открыть мессенджер</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand-logo">
+                        <div class="navbar-logo" style="width: 32px; height: 32px; font-size: 0.9rem;">R1</div>
+                        <span>Red1dark</span>
+                    </div>
+                    <p class="footer-brand-desc">
+                        Независимая технологическая экосистема нового поколения. 
+                        Мессенджер, боты, верификация и инструменты разработки в одной платформе.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Платформа</h4>
+                    <ul class="footer-links">
+                        <li><a href="messenger.html" class="footer-link">Мессенджер</a></li>
+                        <li><a href="bots.html" class="footer-link">Боты</a></li>
+                        <li><a href="verify.html" class="footer-link">RedVerify</a></li>
+                        <li><a href="dashboard.html" class="footer-link">Панель управления</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Компания</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">О студии</a></li>
+                        <li><a href="projects.html" class="footer-link">Проекты</a></li>
+                        <li><a href="philosophy.html" class="footer-link">Философия</a></li>
+                        <li><a href="contacts.html" class="footer-link">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Поддержка</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" class="footer-link">Политика конфиденциальности</a></li>
+                        <li><a href="#" class="footer-link">Документация</a></li>
+                        <li><a href="#" class="footer-link">API</a></li>
+                        <li><a href="contacts.html" class="footer-link">Служба поддержки</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Red1dark Platform. Все права защищены.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Telegram">✈</a>
+                    <a href="#" class="social-link" aria-label="VK">VK</a>
+                    <a href="#" class="social-link" aria-label="GitHub">GH</a>
+                    <a href="#" class="social-link" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
