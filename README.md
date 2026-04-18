@@ -107,6 +107,7 @@ Red1dark Platform — независимая технологическая эк
 ```
 ## 📦 Установка
 ```
+bash
 npm install
 npm run build
 ```
@@ -114,6 +115,6 @@ npm run build
 ```
 pip install -r requirements.txt
 ```
-
-## 📄 Лицензия
-Проект Red1dark Platform © 2026.
+📄 Лицензия
+Проект Red1dark Platform © 2026. Все права защищены.
+См. файлы LICENSE для подробностей.
